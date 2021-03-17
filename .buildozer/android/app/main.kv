@@ -1,0 +1,28 @@
+WindowManager:
+    id: scr_mgr
+    MainWindow:
+        name: "main"
+<MainWindow>
+    name: "main"
+    u_name: u_name
+    FloatLayout:
+        TextInput:
+            id: u_name
+            hint_text: 'instagram_username/shortcode'
+            text_size: self.size
+            valign: 'middle'
+            pos_hint: {'left':.1, 'x': .1, 'top': .8}
+            size_hint: (.8,.07)
+        Button:
+            id: 'btn_download'
+            text: 'Download'
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+            background_color: 158/255, 17/255, 43/255, 1
+            pos_hint: {'x': .2, 'left': .2, 'top': .7}
+            size_hint: (.6,.07)
+            on_release:
+
+                res=root.download()
+
